@@ -4,8 +4,33 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Main Page</title>
+    <script src="js/searchBar.js" type="module"></script>
+    <script src="js/recipeList.js" type="module"></script>
+    <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
-    <div>Hello World</div>
+    <div>
+        <header>
+            <h1>Hello! Welcome to the Recipe finder!</h1>
+        </header>
+        <div class="search-wrapper">   
+                <div class="search-bar-wrapper">
+                    <input type="text" name="query" id="input" placeholder="List your items here">
+                <button id="addBtn">Add Item</button>
+                <button id="clearList">Clear List</button>
+               
+                </div>
+                <h3> Your List of Ingredients</h3>
+                
+               
+                <ul id="items"> 
+                </ul>          
+                <input type="text" id="number" placeholder="How many recipies">
+                <button id="search">Search for Recipies!</button>
+        </div>  
+        <div id="recipesContainer">
+            
+        </div>
+    </div>
 </body>
 </html>

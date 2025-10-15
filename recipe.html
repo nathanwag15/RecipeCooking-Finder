@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="pageTitleTag">Recipe Page</title>
+    <script src="js/recipePage.js" type="module"></script>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/recipe.css">
+</head>
+<body>
+    <h1 id="pageTitle">Hello</h1>
+    <img id="image">
+    <div class="main-details-wrapper">
+        <div class="details-wrapper" id="detailsWrapper">
+            <h1>Important Details</h1>
+            <div class="detail-wrapper">
+                    Servings:
+                    <span id="servings"></span>
+            </div>
+            <div class="detail-wrapper">
+                    Price Per Serving:
+                    <span id="pricePerServing"></span>
+            </div> 
+            <div class="detail-wrapper">
+                    Ready in (Minutes):
+                    <span id="readyInMinutes"></span>
+            </div>
+            <div class="detail-wrapper">
+                    Cook Time (Minutes):
+                    <span id="cookingMinutes"></span>
+            </div>
+            <div class="detail-wrapper">
+                    Prep Time (Minutes):
+                    <span id="preparationMinutes"></span>
+            </div> 
+
+        </div>
+        <div class="scores-wrapper">
+            <h1>Recipe Scores</h1>
+            <div class="score-wrapper">
+                Health Score:
+                <div class="score" id="healthScore"></div>
+            </div>
+            <div class="score-wrapper">
+                Spoontacular Score:
+                <div class="score" id="spoontacularScore"></div>
+            </div>
+            <div class="score-wrapper">
+                Weight Watcher Smart Points:
+                <span class="score" id="weightWatcherSmartPoints"></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="recipe-card-wrapper">
+        <div class="recipe-details">
+            <h3>Recipe by: <span id="creditsText"></span></h3>
+
+            <div class="recipe-card-item">Cheap: <span id="cheap"></span></div>
+            <div class="recipe-card-item">Dairy Free: <span id="dairyFree"></span></div>
+            <div class="recipe-card-item">Gluten Free: <span id="glutenFree"></span></div>
+            <div class="recipe-card-item">Ketogenic: <span id="ketogenic"></span></div>
+            <div class="recipe-card-item">Low FODMAP: <span id="lowFodmap"></span></div>
+            <div class="recipe-card-item">Sustainable: <span id="sustainable"></span></div>
+            <div class="recipe-card-item">Vegan: <span id="vegan"></span></div>
+            <div class="recipe-card-item">Vegetarian: <span id="vegetarian"></span></div>
+            <div class="recipe-card-item">Very Healthy: <span id="veryHealthy"></span></div>
+            <div class="recipe-card-item">Very Popular: <span id="veryPopular"></span></div>
+            <div class="recipe-card-item">Whole30: <span id="whole30"></span></div>
+            <div class="recipe-card-item">Gaps: <span id="gaps"></span></div>
+            <div class="recipe-card-item">Cuisines: <span id="cuisines"></span></div>
+            <div class="recipe-card-item">Diets: <span id="diets"></span></div>
+            <div class="recipe-card-item">Occasions: <span id="occasions"></span></div>
+            <div class="recipe-card-item">Instructions: <span id="instructions"></span></div>
+        </div>
+        <div class="ingredients-wrapper" id="ingredientsWrapper">
+        <h2>Ingredients</h2>
+        <!-- Ingredients will be added here dynamically -->
+        </div>
+    </div>
+    <div class="button-section">
+        <a href="" target="_blank" class="btn-link" id="sourceUrl">Read Original Recipe</a>
+        <p id="youtubeSearch" class="btn-link">See Related Youtube Tutorials</p>
+    </div>
+    <div class="youtube-results-wrapper" id="youtubeResultsWrapper"></div>
+    
+    
+</body>
+</html>
