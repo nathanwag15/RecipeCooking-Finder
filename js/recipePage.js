@@ -40,7 +40,7 @@ async function populateRecipePage(id) {
     console.warn("Falling back to default recipe:", error);
     data = defaultRecipe; // fallback
   }
-
+  console.log(data);
   renderRecipe(data);
 }
 
@@ -81,7 +81,7 @@ function renderRecipe(data) {
 
   sourceUrl.href = data.sourceUrl || "#";
 
-  youtubeSearchBtn.onclick = () => youtubeVideoSearch(data.title);
+  youtubeSearch.onclick = () => youtubeVideoSearch(data.title);
 }
 
 
