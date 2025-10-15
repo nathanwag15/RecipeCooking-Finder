@@ -1,6 +1,7 @@
 // recipeCards.js
 
 // Function to create and display recipe cards
+const basePath = window.location.pathname.split('/')[1];
 export function displayRecipes(data, recipesContainer) {
   recipesContainer.innerHTML = ''; // clear previous results
 
@@ -25,7 +26,7 @@ export function displayRecipes(data, recipesContainer) {
     button.textContent = 'More Info';
 
     button.addEventListener('click', () => {
-       window.location.href = `recipe.html?id=${recipe.id}`;
+       window.location.href = `/${basePath}/recipe.html?id=${recipe.id}`;
     });
 
     recipeCard.appendChild(button);
