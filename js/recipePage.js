@@ -45,8 +45,7 @@ async function populateRecipePage(id) {
             data = defaultRecipe;
         }
     
-        // Pass the data to modular display function
-        window.location.href = '../recipe.html';        
+
     
 
         pageTitle.textContent = data.title;
