@@ -25,7 +25,7 @@ export function displayRecipes(data, recipesContainer) {
     button.textContent = 'More Info';
 
     button.addEventListener('click', () => {
-       window.location.href = `../recipe.html?id=${recipe.id}`;
+       window.location.href = `../recipe.html`;
     });
 
     recipeCard.appendChild(button);
