@@ -4,7 +4,7 @@ import { youtubeVideoSearch } from "./youtubeSearch.js";
 
 
 const params = new URLSearchParams(window.location.search);
-// const recipeId = params.get('id'); // gets the ID from URL
+const recipeId = params.get('id'); // gets the ID from URL
 
 const pageTitle = document.getElementById('pageTitle'); // H1
 const pageTitleTag = document.getElementById('pageTitleTag'); // <title>
