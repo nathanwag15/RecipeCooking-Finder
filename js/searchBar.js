@@ -11,7 +11,36 @@ const clearList = document.getElementById('clearList');
 const moreInfo = document.getElementById('moreInfo');
 
 let itemsList = [];
+
+const key = 'itemsList';
+localStorage.setItem(key, JSON.stringify(itemsList));
+
+
+
 const apiKey = "144f4b41496b496f80a1fc74b5b9e0a5";
+
+
+
+function displayItemList() {
+    itemsListDisplay.innerHTML = '';
+    itemsList = JSON.parse(localStorage.getItem(key)) || [];
+
+    itemsList.forEach(item => {        
+        const li = document.createElement('li');
+        li.textContent = item;
+        itemsListDisplay.appendChild(li);
+
+    });
+    
+    
+
+}
+
+window.addEventListener('load', () => {
+  console.log('✅ Page fully loaded');
+  console.log(itemsList);
+  displayItemList();
+});
 
 // Function to add items to the list of requested ingredients
 addBtn.addEventListener('click', () => {
@@ -19,13 +48,19 @@ addBtn.addEventListener('click', () => {
     
     if (newItemText != "") {
         // Add items to the ul on the search page
-        const li = document.createElement('li');
-        li.textContent = newItemText;
-        itemsListDisplay.appendChild(li);
+        itemsList = JSON.parse(localStorage.getItem(key)) || [];
+        itemsList.push(newItemText);
+        console.log(JSON.parse(localStorage.getItem(key)));
+        console.log(itemsList);
+        localStorage.setItem(key, JSON.stringify(itemsList));
+        displayItemList();
+        itemsList = [];
         input.value = '';
         input.focus;
         // Add items to the list for the search function 
         itemsList.push(newItemText.toLowerCase());
+
+        localStorage.setItem('itemsList', JSON.stringify(itemsList));
 
     }
 })
@@ -78,7 +113,7 @@ search.addEventListener('click', async() => {
         data = defaultRecipeList;
     }
 
-    // Pass the data to modular display function due to daily request limits
+    // Pass the data to modular display function
     displayRecipes(data, recipesContainer);
 
     
