@@ -13,7 +13,10 @@ const moreInfo = document.getElementById('moreInfo');
 let itemsList = [];
 
 const key = 'itemsList';
-localStorage.setItem(key, JSON.stringify(itemsList));
+
+if (!localStorage.getItem(key)) {
+  localStorage.setItem(key, JSON.stringify(itemsList));
+}
 
 
 
@@ -34,11 +37,9 @@ function displayItemList() {
     
     
 
-}
+};
 
 window.addEventListener('load', () => {
-  console.log('✅ Page fully loaded');
-  console.log(itemsList);
   displayItemList();
 });
 
@@ -49,24 +50,21 @@ addBtn.addEventListener('click', () => {
     if (newItemText != "") {
         // Add items to the ul on the search page
         itemsList = JSON.parse(localStorage.getItem(key)) || [];
-        itemsList.push(newItemText);
-        console.log(JSON.parse(localStorage.getItem(key)));
+        itemsList.push(newItemText.toLowerCase());
+        
         console.log(itemsList);
         localStorage.setItem(key, JSON.stringify(itemsList));
+        console.log("LocalStorage:" + JSON.parse(localStorage.getItem(key)));
         displayItemList();
         itemsList = [];
         input.value = '';
         input.focus;
-        // Add items to the list for the search function 
-        itemsList.push(newItemText.toLowerCase());
-
-        localStorage.setItem('itemsList', JSON.stringify(itemsList));
-
     }
 })
 
-clearList.addEventListener('click', () => {
+clearList.addEventListener('click', () => {    
     itemsList = [];
+    localStorage.setItem(key, JSON.stringify(itemsList));
     itemsListDisplay.innerHTML = '';
 
 })
@@ -76,6 +74,7 @@ search.addEventListener('click', async() => {
     let ingredients = ''; 
     // clear the data in the recipesContainer
     recipesContainer.innerHTML='';
+    itemsList = JSON.parse(localStorage.getItem(key)) || [];
 
     let data = [];
     // verify that there are items in the itemsList

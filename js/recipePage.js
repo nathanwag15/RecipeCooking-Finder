@@ -103,6 +103,7 @@ function renderRecipe(data) {
 
 
 
+
 // Call the function with the ID from URL
 if (recipeId) {
 populateRecipePage(recipeId);
