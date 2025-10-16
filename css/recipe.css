@@ -92,6 +92,7 @@ h1, h3 {
     grid-template-columns: 1fr 2fr; 
     gap: 20px; 
     margin-bottom: 20px;
+    width: 60%;
 }
 
 .recipe-details {

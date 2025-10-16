@@ -73,7 +73,6 @@ function renderRecipe(data) {
     document.getElementById('cuisines').textContent = data.cuisines.length ? data.cuisines.join(', ') : 'None';
     document.getElementById('diets').textContent = data.diets.length ? data.diets.join(', ') : 'None';
     document.getElementById('occasions').textContent = data.occasions.length ? data.occasions.join(', ') : 'None';
-    document.getElementById('instructions').textContent = data.instructions || 'None';
     document.getElementById('weightWatcherSmartPoints').textContent = data.weightWatcherSmartPoints || 'N/A';
 
     data.extendedIngredients.forEach(ingredient => {
