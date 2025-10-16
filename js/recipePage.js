@@ -61,14 +61,12 @@ function renderRecipe(data) {
     document.getElementById('cheap').textContent = data.cheap;
     document.getElementById('dairyFree').textContent = data.dairyFree;
     document.getElementById('glutenFree').textContent = data.glutenFree;
-    document.getElementById('ketogenic').textContent = data.ketogenic;
     document.getElementById('lowFodmap').textContent = data.lowFodmap;
     document.getElementById('sustainable').textContent = data.sustainable;
     document.getElementById('vegan').textContent = data.vegan;
     document.getElementById('vegetarian').textContent = data.vegetarian;
     document.getElementById('veryHealthy').textContent = data.veryHealthy;
     document.getElementById('veryPopular').textContent = data.veryPopular;
-    document.getElementById('whole30').textContent = data.whole30;
     document.getElementById('gaps').textContent = data.gaps;
     document.getElementById('cuisines').textContent = data.cuisines.length ? data.cuisines.join(', ') : 'None';
     document.getElementById('diets').textContent = data.diets.length ? data.diets.join(', ') : 'None';
